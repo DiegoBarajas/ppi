@@ -3,8 +3,9 @@ package com.devsau.students.models;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "students")
 public class StudentModel {
-    // Attributes
+    // Attributes | Columns on table studen
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true, nullable = false)
