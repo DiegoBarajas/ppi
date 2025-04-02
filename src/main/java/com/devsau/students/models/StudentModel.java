@@ -10,14 +10,22 @@ public class StudentModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true, nullable = false)
     private Long id;
+
+    @Column(unique = true, nullable = false)
     private int code;
+
+    @Column(nullable = false)
     private String name;
+
+    @Column(unique = true, nullable = false)
     private String email;
+
+    @Column(nullable = false)
     private String degree;
-    private String score;
+    private float score;
 
     // Methods
-    public StudentModel(Long id, int code, String name, String email, String degree, String score) {
+    public StudentModel(Long id, int code, String name, String email, String degree, float score) {
         this.id = id;
         this.code = code;
         this.name = name;
@@ -52,7 +60,7 @@ public class StudentModel {
         return degree;
     }
 
-    public String getScore() {
+    public float getScore() {
         return score;
     }
 
@@ -79,7 +87,7 @@ public class StudentModel {
         this.degree = degree;
     }
 
-    public void setScore(String score) {
+    public void setScore(float score) {
         this.score = score;
     }
 }
